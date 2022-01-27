@@ -68,7 +68,7 @@ async def _tz(context:SlashContext, source_timezone:str, time:str, destination_t
     
     if destination_timezone != 'all':        
         new_time = convert_timezone(source_timezone,destination_timezone,time)
-        await context.send(f'{time} in {TIMEZONES[source_timezone]} time is: {new_time} in {destination_timezone} time.')
+        await context.send(f'{time} in {TIMEZONES[source_timezone]} time is: {new_time} in {TIMEZONES[destination_timezone]} time.')
     else:
         message_string = f'{time} in {TIMEZONES[source_timezone]} time is:'
         
